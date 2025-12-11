@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "MyFont";
+    src: url('./Nithya.otf') format('opentype');
+    font-display: swap;
+}
+
+
+body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            overflow: hidden; /* Block scrolling until login check */
+        }
+
+        /* Fullscreen Lock Screen */
+        #login-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-box {
+            width: 320px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-box #message {
+            height: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+
+/* Title */
+.page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Grid */
+.lyrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Card */
+.song-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 0.3s ease;
+    font-family: "MyFont", sans-serif;
+}
+
+.song-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+/* Text styles */
+.song-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.artist {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.lyrics {
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 900px) {
+    .lyrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 600px) {
+    .lyrics-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-title {
+        font-size: 2rem;
+    }
+}
